@@ -63,20 +63,20 @@ export default function App() {
         </div>
       </form>
       { edit.length === 0 && <div id="wrapper">
-        {arrayToDos.some(todo => todo.checked === false) && <h3>Pending</h3>}
+        {arrayToDos.some(todo => todo.checked === false) && <h3>Pendientes</h3>}
         <ToDoList list={arrayToDos} toggleFunc={toggleFunc} removeToDo={removeToDo} startEdit={startEdit}/>
         {arrayToDos.some(todo => todo.checked === true) &&
         <div>
-          <h3>Completed</h3>
+          <h3>Completadas</h3>
           <div id="completed-wrapper">
             <CompletedList list={arrayToDos} toggleFunc={toggleFunc} removeToDo={removeToDo}/>
           </div>
         </div>}
       </div>}
-      {edit.length === 1 && <div>
+      {edit.length === 1 && <div className="div-edit-form">
         <form id="edit-form" onSubmit={endEdit}>
           <input type="text" ref={editRef} defaultValue={edit[0].task}/>
-          <button type="submit" onClick={endEdit}>Update</button>
+          <button type="submit" onClick={endEdit}>ACTUALIZAR</button>
         </form>
       </div>}
     </div>
