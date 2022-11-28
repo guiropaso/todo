@@ -57,8 +57,10 @@ export default function App() {
   return (
     <div id="app-div">
       <form onSubmit={handleSubmit} id="input-form">
-        <input ref={inputRef} className="todo-input" type="text" placeholder="Ingresa una tarea..." disabled = {edit.length === 1 && true}/>
-        <button onClick={addToDo} className="todo-button" type="submit" disabled = {edit.length === 1 && true}>ADD</button>
+        <div className="input-form-div">
+          <input ref={inputRef} className="todo-input" type="text" placeholder="Ingresa una tarea..." disabled = {edit.length === 1 && true}/>
+          <button onClick={addToDo} className="todo-button" type="submit" disabled = {edit.length === 1 && true}>AGREGAR</button>
+        </div>
       </form>
       { edit.length === 0 && <div id="wrapper">
         {arrayToDos.some(todo => todo.checked === false) && <h3>Pending</h3>}

@@ -42,6 +42,12 @@ body {
     display: block;
 }
 
+.input-form-div {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
 .todo-input, #edit-form > input {
     padding: 13px 30px 13px 15px;
     border-radius: 4px 0 0 4px;
